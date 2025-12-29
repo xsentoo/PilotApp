@@ -46,7 +46,7 @@ public class JwtUtil {
         return extractClaim(token, Claims::getSubject);
     }
 
-    private Claims extractAllClaims(String token) {
+    private Claims extractAllClaims(String token) { //permet ouvrir le token et verifier son identite a chaque action de utilisateur
         return Jwts.parserBuilder()
                 .setSigningKey(getSignInKey())
                 .build()

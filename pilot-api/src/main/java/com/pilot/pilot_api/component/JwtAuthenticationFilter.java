@@ -42,7 +42,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
         jwt = authHeader.substring(7);
 
-        userEmail = jwtUtil.extractUsername(jwt);
+        userEmail = jwtUtil.extractUsername(jwt); // il utilise extractusername pour voir il appartient a qui
 
 
         if (userEmail != null && SecurityContextHolder.getContext().getAuthentication() == null) {

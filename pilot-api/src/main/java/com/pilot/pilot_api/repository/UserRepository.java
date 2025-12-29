@@ -1,4 +1,4 @@
-package com.pilot.pilot_api.repositories;
+package com.pilot.pilot_api.repository;
 
 import com.pilot.pilot_api.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
