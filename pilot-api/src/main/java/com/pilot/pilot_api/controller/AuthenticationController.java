@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.*;
 public class AuthenticationController {
 
     private final AuthenticationService service;
-
+    @GetMapping("/Login")
+    public String login(){
+        return "login";
+    }
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
@@ -28,9 +31,6 @@ public class AuthenticationController {
     ) {
         return ResponseEntity.ok(service.authenticate(request));
     }
-    @GetMapping("/Login")
-        public String login(){
-            return "login";
-        }
+
 
 }
